@@ -1,80 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
     <title>Bate Papo Uol</title>
-</head>
-<body>
-    
+  </head>
+  <body>
     <header class="topBar">
-        <img src="images/logo_uol.png" alt="logo_uol">
-        <ion-icon name="people"></ion-icon>
+      <img src="images/logo_uol.png" alt="logo_uol" />
+      <ion-icon name="people"></ion-icon>
     </header>
     <main>
-        <div class="messageBox">
-            <div class="message normalMessage">
-                <p><span class="timeMessage">(10:50:09)</span> João para Todos: aokjfpdjpifjdafijadfdapfjdapifjidapfjipdajfidajfiadjfiad</p>
-            </div>
-            <div class="message privateMessage">
-                
-            </div>
-            <div class="message normalMessage">
-                <p><span class="timeMessage">(10:50:09)</span> João para Todos: aokjfpdjpifjdafijadfdapfjdapifjidapfjipdajfidajfiadjfiad</p>
-            </div>
-            <div class="message normalMessage">
-                <p><span class="timeMessage">(10:50:09)</span> João para Todos: aokjfpdjpifjdafijadfdapfjdapifjidapfjipdajfidajfiadjfiad</p>
-            </div>
-            <div class="message normalMessage">
-                <p><span class="timeMessage">(10:50:09)</span> João para Todos: aokjfpdjpifjdafijadfdapfjdapifjidapfjipdajfidajfiadjfiad</p>
-            </div>
-            <div class="message normalMessage">
-                <p><span class="timeMessage">(10:50:09)</span> João para Todos: aokjfpdjpifjdafijadfdapfjdapifjidapfjipdajfidajfiadjfiad</p>
-            </div>
-            <div class="message normalMessage">
-                <p><span class="timeMessage">(10:50:09)</span> João para Todos: aokjfpdjpifjdafijadfdapfjdapifjidapfjipdajfidajfiadjfiad</p>
-            </div>
-            <div class="message normalMessage">
-                <p><span class="timeMessage">(10:50:09)</span> João para Todos: aokjfpdjpifjdafijadfdapfjdapifjidapfjipdajfidajfiadjfiad</p>
-            </div>
-            <div class="message normalMessage">
-                <p><span class="timeMessage">(10:50:09)</span> João para Todos: aokjfpdjpifjdafijadfdapfjdapifjidapfjipdajfidajfiadjfiad</p>
-            </div>
-            <div class="message normalMessage">
-                <p><span class="timeMessage">(10:50:09)</span> João para Todos: aokjfpdjpifjdafijadfdapfjdapifjidapfjipdajfidajfiadjfiad</p>
-            </div>
-            <div class="message normalMessage">
-                <p><span class="timeMessage">(10:50:09)</span> João para Todos: aokjfpdjpifjdafijadfdapfjdapifjidapfjipdajfidajfiadjfiad</p>
-            </div>
-            <div class="message normalMessage">
-                <p><span class="timeMessage">(10:50:09)</span> João para Todos: aokjfpdjpifjdafijadfdapfjdapifjidapfjipdajfidajfiadjfiad</p>
-            </div>
-            <div class="message normalMessage">
-                <p><span class="timeMessage">(10:50:09)</span> João para Todos: aokjfpdjpifjdafijadfdapfjdapifjidapfjipdajfidajfiadjfiad</p>
-            </div>
-
-            <div class="message normalMessage">
-                <p><span class="timeMessage">(10:50:09)</span> João para Todos: aokjfpdjpifjdafijadfdapfjdapifjidapfjipdajfidajfiadjfiad</p>
-            </div>
-            <div class="message normalMessage">
-                <p><span class="timeMessage">(10:50:09)</span> João para Todos: aokjfpdjpifjdafijadfdapfjdapifjidapfjipdajfidajfiadjfiad</p>
-            </div>
-            <div class="message normalMessage">
-                <p><span class="timeMessage">(10:50:09)</span> João para Todos: aokjfpdjpifjdafijadfdapfjdapifjidapfjipdajfidajfiadjfiad</p>
-            </div>
-
-        </div>
+      <div class="messageBox">
+      </div>
     </main>
     <footer class="bottomBar">
-        <input type="text" name="message" id="message" placeholder="Escreva aqui...">
-        <ion-icon name="paper-plane-outline"></ion-icon>
+      <input
+        type="text"
+        name="message"
+        id="message"
+        placeholder="Escreva aqui..."
+      />
+      <ion-icon name="paper-plane-outline" onclick="enviarMensagens()"></ion-icon>
     </footer>
 
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
