@@ -74,20 +74,57 @@ function renderizarMensagens(resposta) {
     }
 }
 
+function privateMessageOrNot() {
+    if(selectNomes.value !== "Todos"){
+        tipomensagem = "private_message"
+    } else {
+        tipomensagem = "message"
+    }
+    return tipomensagem
+}
 
 function enviarMensagens() {
     const mensagem = document.querySelector('input')
     const envio = axios.post("https://mock-api.driven.com.br/api/v6/uol/messages", {
         from: nomeUsuario,
-        to: "Todos",
+        to:   selectNomes.value,
         text: mensagem.value,
-        type: "message"
+        type: privateMessageOrNot()
     })
 
     envio.catch(tratarFalha);
 }
 
+
+
 function tratarFalha() {
     alert("Você foi deslogado, a pagina irá reiniciar")
     window.location.reload()
+}
+
+// Selecionar Destinatário
+
+function selectUser() {
+    const selecionarParticipantes = axios.get('https://mock-api.driven.com.br/api/v6/uol/participants');
+    selecionarParticipantes.then(implementarNomes)
+}
+
+setInterval(selectUser, 6000);
+
+function implementarNomes(resposta) {
+    renderizarNomes(resposta)
+}
+
+const selectNomes = document.querySelector("select")
+
+function renderizarNomes(resposta) {
+    selectNomes.innerHTML = ''
+    let option = document.createElement("option")
+    option.text = option.value = "Todos"
+    selectNomes.add(option, selectNomes[0])
+    for(let i = 1; i < resposta.data.length; i++){
+        let option = document.createElement("option")
+        option.text = option.value = `${resposta.data[i].name}`
+        selectNomes.add(option, selectNomes[i])
+    }
 }
