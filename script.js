@@ -77,7 +77,6 @@ function renderizarMensagens(resposta) {
 
 function enviarMensagens() {
     const mensagem = document.querySelector('input')
-    console.log(mensagem)
     const envio = axios.post("https://mock-api.driven.com.br/api/v6/uol/messages", {
         from: nomeUsuario,
         to: "Todos",
